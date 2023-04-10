@@ -60,11 +60,11 @@ and al, 0fh
 
 cmp al, 09h
 jbe BELOW_9
-add al 07h
+add al, 07h
 
 BELOW_9:
-add al 30h
-mov [rdi], al
+add al, 30h
+mov [rdi], rax
 
 inc rdi
 dec byte[count]
